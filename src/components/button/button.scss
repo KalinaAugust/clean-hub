@@ -1,0 +1,43 @@
+@use '../../utilities/variables' as scss;
+
+.button {
+  background-color: scss.$orange;
+  border-radius: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: scss.$white;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: .03em;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(36, 36, 36, .2);
+
+  &:hover {
+    background-color:  darken(scss.$orange, 10);
+  }
+
+  &.is-rounded {
+    border-radius: 30px;
+    font-size: 18px;
+    height: 55px;
+
+    @include scss.on-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &.is-disabled {
+    background-color: gray !important;
+  }
+
+  @include scss.on-tablet {
+    height: 50px;
+    font-size: 18px;
+  }
+}

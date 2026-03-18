@@ -1,0 +1,59 @@
+@use '../../utilities/variables' as scss;
+
+.form-input-wrapper {
+  padding-top: 15px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &.valid {
+    .form-input {
+      border: 1px solid #3BC87C !important;
+    }
+  }
+
+  &.invalid {
+    .form-input {
+      border: 1px solid #FA5252 !important;
+      color: #FA5252;
+    }
+
+    .form-input-error {
+      display: block;
+    }
+  }
+
+  .form-input {
+    height: 52px;
+    width: 100%;
+    border: 1px solid #C8C8C8;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #F4F4F4;
+
+    &:focus {
+      border: 1px solid scss.$blue;
+    }
+  }
+
+  .form-input-label {
+    color: scss.$black;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 16px;
+    top: 6px;
+    padding: 0 4px;
+    background-color: #F4F4F4;
+  }
+
+  .form-input-error {
+    display: none;
+    color: #FA5252;
+    font-weight: 600;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

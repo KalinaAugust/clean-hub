@@ -1,0 +1,70 @@
+@use '../../utilities/variables' as scss;
+
+.overlay {
+  background-color: scss.$white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+
+  .sub-header__link {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  &__phone-link {
+    color: scss.$black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+    letter-spacing: 0.08em;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  &__phone-icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+}
+
+.overlay-divider {
+  border-top: 2px solid scss.$dark-gray;
+  width: 300px;
+  margin: 50px 0;
+}
+
+.hamburger-react[aria-expanded="true"] {
+  div {
+    background: scss.$blue !important;
+  }
+}
+
+.hamburger-react {
+  z-index: 5;
+  display: none;
+
+  div {
+    background: scss.$white !important;
+
+    @include scss.on-tablet {
+      background: scss.$blue !important;
+    }
+  }
+
+  @include scss.on-small-screen {
+    display: block;
+  }
+}

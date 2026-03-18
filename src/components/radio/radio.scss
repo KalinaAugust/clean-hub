@@ -1,0 +1,33 @@
+@use '../../utilities/variables' as scss;
+
+.radio {
+  height: 23px;
+  width: 23px;
+  border: 3px solid #C8C8C8;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color .3s;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: scss.$blue;
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+  }
+
+  &.is-checked {
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid scss.$blue;
+
+    &.radio::before {
+      display: block;
+    }
+  }
+}

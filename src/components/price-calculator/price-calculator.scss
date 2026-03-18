@@ -1,0 +1,218 @@
+@use '../../utilities/variables' as scss;
+
+.price-calculator {
+  margin-top: 100px;
+  padding-bottom: 70px;
+
+  .wrapper {
+    max-width:1130px;
+  }
+
+  @include scss.on-tablet {
+    margin-top: 50px;
+  }
+
+  .blue {
+    color: scss.$blue;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: scss.$black;
+    text-align: center;
+
+    @include scss.on-tablet {
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    @include scss.on-mobile {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    @include scss.on-small-screen {
+      display: block;
+    }
+  }
+
+  &__left {
+    max-width: 580px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include scss.on-small-screen {
+      display: none;
+    }
+  }
+
+  &__img-1 {
+    width: 280px;
+    height: 293px;
+    background-image: url("../../images/hostel-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__img-2 {
+    width: 280px;
+    height: 293px;
+    background-image: url("../../images/hostel-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__img-3 {
+    width: 580px;
+    height: 300px;
+    background-image: url("../../images/hostel-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+  }
+
+  &__right {
+    max-width: 500px;
+    width: 100%;
+
+    @include scss.on-small-screen {
+      max-width: 100%;
+    }
+  }
+
+  &__price {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: scss.$light-gray;
+    padding: 40px 70px 40px 30px;
+    max-width: 550px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include scss.on-small-screen {
+      margin: 0 auto;
+    }
+
+    @include scss.on-tablet {
+      padding: 30px;
+    }
+
+    @include scss.on-mobile {
+      padding: 30px 15px;
+    }
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__price-label {
+    font-weight: 600;
+    font-size: 20px;
+    color: scss.$black;
+
+    @include scss.on-tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__price-select {
+    width: 100%;
+    min-width: 350px;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 4px 24px rgba(174, 174, 174, .2);
+  }
+
+  &__price-calculated {
+    font-weight: 600;
+    font-size: 20px;
+    width: 210px;
+    height: 30px;
+    margin-top: 30px;
+    color: scss.$black;
+
+    @include scss.on-small-screen {
+      width: 210px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: scss.$white;
+      margin-top: 20px;
+      padding: 0 15px;
+      box-shadow: 0 4px 24px rgba(174, 174, 174, .2);
+      color: scss.$black;
+    }
+  }
+
+  &__price-number {
+    padding-left: 10px;
+    color: scss.$orange;
+    font-size: 20px;
+  }
+
+  &__price-button {
+    margin-top: 35px;
+    width: 100%;
+  }
+
+  &__counts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    @include scss.on-small-screen {
+      margin-top: 30px;
+    }
+
+    @include scss.on-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__counts-item {
+    width: 45%;
+    margin-top: 40px;
+
+    @include scss.on-small-screen {
+      width: 30%;
+      text-align-last: center;
+    }
+
+    @include scss.on-tablet {
+      min-width: 250px;
+    }
+  }
+
+  &__counts-item-number {
+    font-weight: 700;
+    font-size: 38px;
+    color: scss.$blue;
+  }
+
+  &__counts-item-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: scss.$black;
+
+    @include scss.on-small-screen {
+      margin-top: 10px;
+    }
+  }
+}

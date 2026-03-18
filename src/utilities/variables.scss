@@ -1,0 +1,25 @@
+// colors
+$white: #FAFAFA;
+$black: #1C272D;
+$blue: #559EC7;
+$orange: #FF9312;
+$light-gray: #F4F4F4;
+$gray: #C8C8C8;
+$dark-gray: #9999A7;
+$text: #71777B;
+
+// breakpoints mixins
+@mixin on-small-screen {
+  @media (max-width: 1100px) { @content; }
+}
+
+@mixin on-tablet {
+  @media (max-width: 768px) { @content; }
+}
+
+@mixin on-mobile {
+  @media (max-width: 480px) { @content; }
+}
+
+
+

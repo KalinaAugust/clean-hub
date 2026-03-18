@@ -1,0 +1,45 @@
+@use '../../utilities/variables' as scss;
+
+.logo {
+  font-size: 24px;
+  color: scss.$white;
+  font-weight: 900;
+  line-height: 29px;
+  letter-spacing: .03em;
+  cursor: pointer;
+
+  &.is-footer {
+    .logo__first-word {
+      color: scss.$white;
+      font-size: 32px;
+      letter-spacing: .96px;
+    }
+
+    .logo__second-word {
+      color: scss.$blue;
+      font-size: 32px;
+      letter-spacing: .96px;
+    }
+  }
+
+  @include scss.on-tablet {
+    &.is-header {
+      .logo__first-word {
+        color: scss.$black;
+      }
+
+      .logo__second-word {
+        color: scss.$blue;
+      }
+    }
+
+    &.is-footer {
+      text-align: center;
+    }
+  }
+
+  @include scss.on-tablet {
+    font-size: 20px;
+  }
+}
+

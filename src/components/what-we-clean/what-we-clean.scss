@@ -1,0 +1,155 @@
+@use '../../utilities/variables' as scss;
+
+.what-we-clean {
+  background-color: scss.$white;
+
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: .03em;
+    text-align: center;
+
+    .blue {
+      color: scss.$blue;
+    }
+
+    @include scss.on-tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__tabs-wrapper {
+    padding: 0 15px;
+    margin: 60px 0 40px 0;
+
+    @include scss.on-tablet {
+      margin: 30px 0 20px 0;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    max-width: 780px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include scss.on-tablet {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__tabs-item {
+    width: 20%;
+    cursor: pointer;
+    background: scss.$light-gray;
+    color: scss.$dark-gray;
+    padding: 18px 0;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+
+    &.active {
+      background: scss.$blue;
+      color: scss.$white;
+    }
+
+    @include scss.on-tablet {
+      font-size: 14px;
+      border-radius: 10px;
+      width: 48%;
+      height: 40px;
+      padding: 12px 0;
+      margin-top: 10px;
+    }
+  }
+
+  &__wrapper {
+    background-image: url("../../images/room.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 725px;
+    display: flex;
+    justify-content: flex-end;
+
+    @include scss.on-small-screen {
+      display: block;
+    }
+
+    @include scss.on-tablet {
+      background-image: none;
+      background-color: scss.$white;
+      min-height: 480px;
+    }
+
+    @include scss.on-mobile {
+      min-height: auto;
+    }
+  }
+
+  &__content {
+    background-color: rgba(255, 255, 255, .7);
+    width: 50%;
+    min-height: 725px;
+    padding: 80px 15px 50px 5%;
+
+    @include scss.on-small-screen {
+      width: 100%;
+    }
+
+    @include scss.on-tablet {
+      min-height: 480px;
+      background-color: scss.$white;
+      padding: 30px;
+    }
+
+    @include scss.on-mobile {
+      min-height: auto;
+    }
+  }
+
+  &__content-title {
+    color: scss.$black;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: .03em;
+
+    @include scss.on-tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__content-list {
+    margin-top: 40px;
+    color: scss.$black;
+    max-width: 480px;
+
+    @include scss.on-tablet {
+      margin-top: 20px;
+    }
+  }
+
+  &__content-item {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+
+    @include scss.on-tablet {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  &__price-button {
+    margin-top: 50px;
+    max-width: 380px;
+  }
+}
+

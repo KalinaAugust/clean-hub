@@ -1,0 +1,229 @@
+@use '../../utilities/variables' as scss;
+
+.first-section {
+  background-color: scss.$blue;
+
+  &__wrapper {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    background-repeat: no-repeat;
+
+    @include scss.on-tablet {
+      padding: 40px;
+    }
+
+    @include scss.on-mobile {
+      padding:  50px 15px;
+    }
+  }
+
+  .one-time-cleaning {
+    background-image: url("../../images/one-time-cleaning.png");
+    background-size: 600px;
+    background-position: bottom 125px right 10px;
+
+    @include scss.on-tablet {
+      background-image: url("../../images/cleaning-for-eviction-tablet.png");
+      background-position: bottom 50px right 0;
+      background-size: 300px;
+    }
+  }
+
+  .cleaning-for-eviction, .maintenance-cleaning {
+    background-image: url("../../images/cleaning-for-eviction-desktop.png");
+    background-size: 450px;
+    background-position: bottom 125px right 10px;
+
+    @include scss.on-tablet {
+      background-image: url("../../images/cleaning-for-eviction-tablet.png");
+      background-position: bottom 50px right 0;
+      background-size: 300px;
+    }
+  }
+
+  .wallpaper {
+    background-image: url("../../images/wallpaper-desktop.png");
+    background-size: 500px;
+    background-position: bottom 125px right -12px;
+
+    @include scss.on-tablet {
+      background-image: url("../../images/wallpaper-tablet.png");
+      background-position: bottom 0 right 10px;
+      background-size: 250px;
+    }
+  }
+
+  .mold-removal {
+    background-image: url("../../images/mold-removal-desktop.png");
+    background-size: 450px;
+    background-position: bottom 145px right 20px;
+
+    @include scss.on-tablet {
+      background-image: url("../../images/mold-removal-tablet.png");
+      background-position: bottom 60px right 0;
+      background-size: 200px;
+    }
+  }
+
+  .wall-repair {
+    background-image: url("../../images/wall-repair-desktop.png");
+    background-size: 520px;
+    background-position: bottom 145px right 10px;
+
+    @include scss.on-tablet {
+      background-image: url("../../images/wall-repair-tablet.png");
+      background-position: bottom 130px right 0;
+      background-size: 200px;
+    }
+  }
+
+  &__title {
+    margin-top: 50px;
+    min-height: 130px;
+
+    p {
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 65px;
+      color: scss.$white;
+
+      @include scss.on-tablet {
+        color: scss.$blue;
+        font-size: 42px;
+        line-height: 48px;
+      }
+
+      @include scss.on-mobile {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    @include scss.on-tablet {
+      margin-top: 30px;
+    }
+  }
+
+  &__sub-title {
+    margin-top: 15px;
+    min-height: 70px;
+
+    p {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 32px;
+      color: scss.$white;
+
+      @include scss.on-tablet {
+        color: scss.$black;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @include scss.on-mobile {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__price {
+    padding: 25px 50px;
+    border-radius: 20px;
+    background-color: #77b1d1;
+    margin-top: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include scss.on-small-screen {
+      padding: 25px;
+    }
+
+    @include scss.on-tablet {
+      margin-top: 50px;
+      width: 330px;
+      padding: 0;
+      background-color: transparent;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+
+    @include scss.on-tablet {
+      width: auto;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__price-select {
+    max-width: 350px;
+    min-width: 350px;
+    border-radius: 10px;
+
+    @include scss.on-tablet {
+      box-shadow: 0 4px 24px rgba(174, 174, 174, .2);
+    }
+  }
+
+  &__price-calculated {
+    min-width: 195px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    color: scss.$white;
+
+    @include scss.on-small-screen {
+      min-width: 165px;
+      font-size: 20px;
+    }
+
+    @include scss.on-tablet {
+      width: 210px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      font-size: 18px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: scss.$white;
+      margin-top: 16px;
+      margin-left: 0;
+      box-shadow: 0 4px 24px rgba(174, 174, 174, .2);
+      color: scss.$black;
+    }
+  }
+
+  &__price-number {
+    padding: 5px;
+    margin-left: 5px;
+    color: scss.$orange;
+    background-color: scss.$white;
+    border-radius: 8px;
+
+    @include scss.on-tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__price-button {
+    width: 360px;
+
+    @include scss.on-tablet {
+      width: 330px;
+      margin-top: 40px;
+    }
+  }
+
+  @include scss.on-tablet {
+    background-color: scss.$light-gray;
+  }
+}
+

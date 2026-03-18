@@ -1,0 +1,241 @@
+@use '../../utilities/variables' as scss;
+
+.guide-section {
+  padding: 100px 10px;
+  background-color: scss.$white;
+
+  &__wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: rgba(85, 158, 199, .08);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1280px) {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    @include scss.on-tablet {
+      background-color: scss.$white;
+    }
+
+    @include scss.on-mobile {
+      padding: 40px 0;
+    }
+  }
+
+  &__titles {
+    color: scss.$black;
+    max-width: 350px;
+
+    @media (max-width: 1280px) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+
+    @media (max-width: 1280px) {
+      text-align: center;
+    }
+
+    @include scss.on-tablet {
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    @include scss.on-mobile {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  &__sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    margin-top: 15px;
+
+    @media (max-width: 1280px) {
+      text-align: center;
+    }
+
+    @include scss.on-mobile {
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 400px;
+    }
+  }
+
+  &__card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 800px;
+
+    :nth-child(even) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    @media (max-width: 1280px) {
+      margin-top: 70px;
+    }
+
+    @include scss.on-tablet {
+      display: none;
+    }
+  }
+
+  &__card {
+    box-shadow: 0 4px 24px rgba(198, 198, 198, .2);
+    border-radius: 20px;
+    background-color: scss.$white;
+    padding: 40px 15px;
+    max-width: 250px;
+    text-align: center;
+    min-width: 200px;
+
+    @include scss.on-tablet {
+      max-width: 350px;
+      min-width: 300px;
+      height: 350px;
+      box-shadow: none;
+      margin: 0 auto;
+    }
+  }
+
+  &__card-icon {
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    margin: 0 auto;
+
+    &.papers {
+      background-image: url("../../images/icons/papers.svg");
+    }
+
+    &.connection {
+      background-image: url("../../images/icons/connection.svg");
+    }
+
+    &.teamwork {
+      background-image: url("../../images/icons/teamwork.svg");
+    }
+
+    &.bucket {
+      background-image: url("../../images/icons/papers.svg");
+    }
+
+    &.price-tag {
+      background-image: url("../../images/icons/connection.svg");
+    }
+
+    &.done {
+      background-image: url("../../images/icons/teamwork.svg");
+    }
+
+    &.showel {
+      background-image: url("../../images/icons/showel.svg");
+    }
+
+    &.brush {
+      background-image: url("../../images/icons/brush.svg");
+    }
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: scss.$black;
+    margin-top: 40px;
+  }
+
+  &__card-text {
+    color: scss.$dark-gray;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__carousel#guide-section-carousel {
+    display: none;
+    margin-top: 30px;
+
+    .carousel-slider {
+      width: 600px !important;
+
+      @media (max-width: 620px) {
+        width: 500px !important;
+      }
+
+      @media (max-width: 520px) {
+        width: 400px !important;
+      }
+
+      @include scss.on-mobile {
+        width: 300px !important;
+      }
+    }
+
+    .dot {
+      background: scss.$gray;
+
+      &.selected {
+        background: scss.$blue;
+      }
+    }
+
+    button.control-arrow {
+      width: 43px;
+      height: 43px;
+      background: url("../../images/arrow.png") center no-repeat;
+      background-size: 43px;
+      top: calc(50% - 21px);
+
+      &::before {
+        display: none;
+      }
+
+      &:hover {
+        background: url("../../images/arrow.png") center no-repeat;
+        background-size: 43px;
+      }
+
+      @media (max-width: 520px) {
+        display: none;
+      }
+    }
+
+    .control-prev {
+      transform: rotate(180deg);
+    }
+
+    .control-next {
+
+    }
+
+    @include scss.on-tablet {
+      display: block;
+    }
+  }
+
+  @include scss.on-tablet {
+    padding: 50px 10px;
+  }
+
+  @include scss.on-mobile {
+    padding: 20px 10px;
+  }
+}

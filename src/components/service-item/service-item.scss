@@ -1,0 +1,34 @@
+@use '../../utilities/variables' as scss;
+
+.service__item {
+  width: auto;
+  border: 1px solid #C8C8C8;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color .3s;
+  margin-bottom: 14px;
+  margin-right: 14px;
+  display: inline-flex;
+  align-items: center;
+
+  @include scss.on-tablet {
+    padding: 15px;
+  }
+
+  &.is-active, &:hover {
+    border: 1px solid scss.$blue;
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+    color: scss.$black;
+
+    @include scss.on-tablet {
+      font-size: 14px;
+      padding-left: 10px;
+    }
+  }
+}

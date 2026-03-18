@@ -1,0 +1,122 @@
+@use '../../utilities/variables' as scss;
+
+.header {
+  width: 100%;
+  background-color: scss.$blue;
+  padding: 10px;
+
+  .header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+
+    @include scss.on-small-screen {
+      width: auto;
+    }
+  }
+
+  .phone-link {
+    color: scss.$white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+    letter-spacing: 0.08em;
+    position: relative;
+    padding-left: 25px;
+
+    @include scss.on-tablet {
+      color: scss.$black;
+      font-size: 18px;
+    }
+  }
+
+  .phone-number {
+    @include scss.on-mobile {
+      display: none;
+    }
+  }
+
+  .phone-icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+
+  .sub-header {
+    color: scss.$white;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+
+      &.active {
+        color: scss.$orange;
+        font-weight: 700;
+      }
+    }
+
+    @include scss.on-small-screen {
+      display: none;
+    }
+  }
+
+  .social-block {
+    @include scss.on-small-screen {
+      display: none;
+    }
+  }
+
+  &__language {
+    cursor: pointer;
+    font-size: 20px;
+    color: scss.$white;
+
+    @include scss.on-small-screen {
+      margin: 0 20px;
+    }
+
+    @include scss.on-tablet {
+      margin: 0 10px;
+      color: scss.$blue;
+    }
+  }
+
+  &__language-item {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: top 0 left 0;
+
+    &.RU {
+      background-image: url("../../images/icons/russia.png");
+    }
+
+    &.CN {
+      background-image: url("../../images/icons/china.png");
+    }
+  }
+
+  @include scss.on-tablet {
+    background-color: scss.$white;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .04), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, .04);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+}
+

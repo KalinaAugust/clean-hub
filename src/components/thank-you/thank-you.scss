@@ -1,0 +1,35 @@
+@use '../../utilities/variables' as scss;
+
+.thank-you {
+  padding: 100px 0;
+  min-height: 80vh;
+
+  @include scss.on-tablet {
+    padding: 60px 0;
+    min-height: 30vh;
+  }
+
+  &__title {
+    margin: 60px 0;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 700;
+
+    @include scss.on-tablet {
+      font-size: 36px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__button-wrapper {
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 480px;
+  }
+}

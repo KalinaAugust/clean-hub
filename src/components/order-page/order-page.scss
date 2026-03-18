@@ -1,0 +1,155 @@
+@use '../../utilities/variables' as scss;
+
+.order {
+  padding: 30px 0;
+
+  @include scss.on-tablet {
+    padding: 70px 0 30px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__wrapper-right {
+    flex-grow: 1;
+  }
+
+  &__wrapper-left {
+    min-width: 380px;
+    width: 380px;
+
+    @include scss.on-small-screen {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    color: scss.$black;
+    font-weight: 700;
+    margin: 40px 0;
+
+    @include scss.on-mobile {
+      margin: 20px 0;
+      font-size: 22px;
+    }
+  }
+
+  &__select-wrapper {
+    max-width: 400px;
+  }
+
+  &__room-input-wrapper {
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  &__form-wrapper {
+    display: flex;
+    column-gap: 16px;
+
+    @include scss.on-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__form-fileds {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-bottom: 16px;
+
+    @include scss.on-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-check-field {
+    margin-top: 25px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+
+    @include scss.on-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__form-textarea {
+    resize: none;
+    height: 180px;
+    width: 100% !important;
+    border: 1px solid #C8C8C8;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #F4F4F4;
+
+    @include scss.on-tablet {
+      margin-top: 20px;
+      height: 100px;
+    }
+
+    &:focus {
+      border: 1px solid scss.$blue;
+    }
+  }
+
+  &__check-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 500;
+    color: #71777B;
+
+    @include scss.on-mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__check-field-text {
+    margin-left: 10px;
+  }
+
+  &__submit-button {
+    max-width: 500px;
+    margin: 30px 0;
+  }
+
+  &__global-error {
+    padding-bottom: 10px;
+    font-size: 17px;
+    color: #fa5252;
+  }
+
+  &__payments-item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__payments-item {
+    border-radius: 10px;
+    border: 1px solid #C8C8C8;
+    padding: 30px 50px;
+    text-align: center;
+    width: 240px;
+    height: 134px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: scss.$black;
+
+    &.active {
+      border: 1px solid scss.$blue;
+    }
+  }
+}
+

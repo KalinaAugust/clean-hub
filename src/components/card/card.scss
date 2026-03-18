@@ -1,0 +1,53 @@
+@use '../../utilities/variables' as scss;
+
+.card {
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  padding: 40px;
+  margin-bottom: 20px;
+
+  @include scss.on-mobile {
+    padding: 30px 16px;
+  }
+
+  &.is-aside {
+    padding: 40px 20px;
+    position: sticky;
+    top: 20px;
+
+    .card__title {
+      font-size: 18px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__step {
+    display: inline-block;
+    color: scss.$blue;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 20px;
+
+    @include scss.on-mobile {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    color: scss.$black;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .6px;
+
+    @include scss.on-mobile {
+      font-size: 18px;
+    }
+  }
+
+}

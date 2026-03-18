@@ -1,0 +1,98 @@
+@use '../../utilities/variables' as scss;
+
+.faq {
+  margin-top: 100px;
+
+  @include scss.on-tablet {
+    margin-top: 50px;
+  }
+
+  .blue {
+    color: scss.$blue;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: scss.$black;
+    text-align: center;
+
+    @include scss.on-tablet {
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    @include scss.on-mobile {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  &__accordion-wrapper#faq-accordion-wrapper {
+    margin-top: 60px;
+    padding-bottom: 50px;
+
+    .accordion {
+      border: none;
+      border-radius: 0;
+      margin-top: 50px;
+
+      &:nth-last-child(1) {
+        border-bottom: 1px solid scss.$gray;
+      }
+    }
+
+    .accordion__item {
+      border-top: 1px solid scss.$gray;
+    }
+
+    .accordion__heading {
+      border: none;
+      background-color: transparent;
+    }
+
+    .accordion__button {
+      background-color: transparent;
+      position: relative;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      color: scss.$blue;
+      padding: 30px 30px 30px 0;
+
+      &::before {
+        position: absolute;
+        right: 0;
+        top: calc(50% - 7px);
+        color: scss.$gray;
+      }
+
+      @include scss.on-tablet {
+        padding: 20px 30px 20px 0;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @include scss.on-mobile {
+        font-size: 17px;
+        line-height: 22px;
+      }
+    }
+
+    .accordion__panel {
+      padding: 15px 15px 25px 0;
+      color: scss.$black;
+      font-weight: 500;
+      font-size: 18px;
+      max-width: 900px;
+      line-height: 28px;
+
+      @include scss.on-tablet {
+        padding: 10px 10px 20px 0;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
