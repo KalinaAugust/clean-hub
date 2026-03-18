@@ -11,7 +11,7 @@ import $ from 'jquery';
 
 import {Card} from '../card/Card'
 import {ReactComponent as BackArrow} from '../../images/icons/back-arrow.svg';
-import {orderRU, orderCN, allRU, allCN} from '../../content/pageContent';
+import { usePageContent } from '../../hooks/usePageContent';
 
 const emailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -104,16 +104,18 @@ export const OrderPage = () => {
     const thirdStep = useRef(null);
     const navigate = useNavigate();
     const language = useSelector((state) => state.app.language);
+    const pageContent = usePageContent();
 
     let content;
     let commonContent;
+    const orderContentRU = pageContent.orderRU;
 
     if (language === 'RU') {
-        content = orderRU;
-        commonContent = allRU;
+        content = pageContent.orderRU;
+        commonContent = pageContent.allRU;
     } else if (language === 'CN') {
-        content = orderCN;
-        commonContent = allCN;
+        content = pageContent.orderCN;
+        commonContent = pageContent.allCN;
     }
 
     const [state, dispatch] = useReducer(reducer, initialState, state => {
@@ -202,7 +204,7 @@ export const OrderPage = () => {
 
         services.forEach(item => {
             if (language !== 'RU') {
-                const russianServices = orderRU.services[state.dorm.value];
+                const russianServices = orderContentRU.services[state.dorm.value];
                 item.title = russianServices.find(el => el.name === item.name).title;
             }
 
@@ -220,7 +222,7 @@ export const OrderPage = () => {
     }
 
     const prepareDorm = (dorm) => {
-        const dormsFromContent = orderRU.addresses;
+        const dormsFromContent = orderContentRU.addresses;
 
         if (language === 'RU') {
             return dorm.label;

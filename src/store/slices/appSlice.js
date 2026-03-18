@@ -138,7 +138,8 @@ export const initializeApp = createAsyncThunk(
 const initialState = {
     language: 'RU',
     prices: defaultPrices,
-    sheetsData: null,
+    pricesData: {},
+    bannerData: {},
     isLoading: false,
     isInitialized: false,
     error: null,
@@ -164,7 +165,8 @@ const appSlice = createSlice({
             .addCase(initializeApp.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isInitialized = true;
-                state.sheetsData = action.payload;
+                state.pricesData = action.payload.pricesData;
+                state.bannerData = action.payload.bannerData;
             })
             .addCase(initializeApp.rejected, (state, action) => {
                 state.isLoading = false;

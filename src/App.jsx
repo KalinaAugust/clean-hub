@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './App.scss';
 import CleaningForEviction from './pages/CleaningForEviction';
 import MaintenanceCleaning from './pages/MaintenanceCleaning';
@@ -11,8 +12,15 @@ import Order from './pages/Order';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import PublicOffer from './pages/PublicOffer';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import Loader from './components/loader/Loader';
 
 function App() {
+    const isInitialized = useSelector((state) => state.app.isInitialized);
+
+    if (!isInitialized) {
+        return <Loader />;
+    }
+
     return (
         <>
             <ScrollToTop />
