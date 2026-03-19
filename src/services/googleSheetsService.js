@@ -61,7 +61,7 @@ export const fetchGoogleSheetsData = async () => {
             acc[item.dorm] = normalizePrices(itemWithoutDorm);
             return acc;
         }, {});
-
+        console.log(formattedPricesData);
         return {
             pricesData: formattedPricesData,
             bannerData: bannerData.map((item) => ({...item, show: item.show === 'TRUE'}))
