@@ -152,9 +152,6 @@ const appSlice = createSlice({
         setLanguage: (state, action) => {
             state.language = action.payload;
         },
-        setPrices: (state, action) => {
-            state.prices = action.payload;
-        },
     },
     extraReducers: (builder) => {
         builder
@@ -176,9 +173,10 @@ const appSlice = createSlice({
     },
 });
 
-export const { setLanguage, setPrices } = appSlice.actions;
+export const { setLanguage } = appSlice.actions;
 
 // Селектор для получения цен
-export const selectPrices = (state) => state.app.prices;
+// export const selectPrices = (state) => state.app.prices;
+export const selectPrices = (state) => state.app.pricesData;
 
 export default appSlice.reducer;

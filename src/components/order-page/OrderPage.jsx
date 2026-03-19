@@ -13,7 +13,7 @@ import {Card} from '../card/Card'
 import {ReactComponent as BackArrow} from '../../images/icons/back-arrow.svg';
 import { usePageContent } from '../../hooks/usePageContent';
 
-const emailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const emailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const ACTIONS = {
     SET_DORM: 'SET_DORM',
@@ -54,8 +54,6 @@ function reducer(state, action) {
                 ...state,
                 services: state.services.map(item => {
                     if (action.payload.name === item.name) {
-                        // console.log('if', item.name);
-                        // console.log('value', action.payload.value);
                         return {
                             ...item,
                             active: action.payload.value,

@@ -1174,7 +1174,7 @@ const getOrderCN = (reduxPrices) => ({
 // Хук для получения контента с ценами из Redux
 export const usePageContent = () => {
     const prices = useSelector(selectPrices);
-
+    console.log(prices);
     // Создаём reduxPrices из Redux prices
     const reduxPrices = useMemo(() => prices, [prices]);
 
@@ -1198,7 +1198,7 @@ export const usePageContent = () => {
                 '5.1': reduxPrices.oktyabrskaya4?.['cleaning-for-eviction'],
                 '5.2': reduxPrices.oktyabrskaya4?.['cleaning-for-eviction-2'],
                 '6.1': reduxPrices.oktyabrskaya10?.['cleaning-for-eviction'],
-                '6.2': reduxPrices.oktyabrskaya4?.['cleaning-for-eviction-2'],
+                '6.2': reduxPrices.oktyabrskaya10?.['cleaning-for-eviction-2'],
                 '7': reduxPrices.oktyabrskaya10a?.['cleaning-for-eviction'],
                 '11': reduxPrices.dzerzhinskogo87?.['cleaning-for-eviction'],
                 '12': reduxPrices.dzerzhinskogo83_16?.['cleaning-for-eviction'],
@@ -1251,6 +1251,8 @@ export const usePageContent = () => {
                 '4.1': reduxPrices.churlenisa1?.['maintenance-cleaning__2'],
                 '4.2': reduxPrices.churlenisa3?.['maintenance-cleaning__2'],
                 '4.3': reduxPrices.churlenisa5?.['maintenance-cleaning__2'],
+                '5': reduxPrices.oktyabrskaya4?.['maintenance-cleaning__2'],
+                '6': reduxPrices.oktyabrskaya10?.['maintenance-cleaning__2'],
                 '7': reduxPrices.oktyabrskaya10a?.['maintenance-cleaning__2'],
                 '11': reduxPrices.dzerzhinskogo87?.['maintenance-cleaning__2'],
                 '12': reduxPrices.dzerzhinskogo83_16?.['maintenance-cleaning__2'],

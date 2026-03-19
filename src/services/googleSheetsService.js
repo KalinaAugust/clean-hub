@@ -44,10 +44,10 @@ export const fetchGoogleSheetsData = async () => {
         ]);
 
         if (!pricesResponse.ok) {
-            throw new Error(`Failed to fetch Prices data: ${pricesResponse.statusText}`);
+            new Error(`Failed to fetch Prices data: ${pricesResponse.statusText}`);
         }
         if (!bannerResponse.ok) {
-            throw new Error(`Failed to fetch Banner data: ${bannerResponse.statusText}`);
+            new Error(`Failed to fetch Banner data: ${bannerResponse.statusText}`);
         }
 
         const pricesText = await pricesResponse.text();
@@ -61,7 +61,7 @@ export const fetchGoogleSheetsData = async () => {
             acc[item.dorm] = normalizePrices(itemWithoutDorm);
             return acc;
         }, {});
-        console.log(formattedPricesData);
+        // console.log(formattedPricesData);
         return {
             pricesData: formattedPricesData,
             bannerData: bannerData.map((item) => ({...item, show: item.show === 'TRUE'}))
