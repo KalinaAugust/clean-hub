@@ -3,24 +3,31 @@
 .guide-section {
   padding: 100px 10px;
   background-color: scss.$white;
+  background-image:
+          radial-gradient(circle at 10% 20%, rgba(scss.$blue, 0.04) 0%, transparent 40%),
+          radial-gradient(circle at 90% 80%, rgba(scss.$blue, 0.04) 0%, transparent 40%);
 
   &__wrapper {
     max-width: 1300px;
     margin: 0 auto;
-    background: rgba(85, 158, 199, .08);
-    border-radius: 20px;
-    padding: 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    border-radius: 30px;
+    padding: 60px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @media (max-width: 1280px) {
       flex-direction: column;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     @include scss.on-tablet {
-      background-color: scss.$white;
+      background: rgba(255, 255, 255, 0.6);
     }
 
     @include scss.on-mobile {
@@ -96,9 +103,10 @@
   }
 
   &__card {
-    box-shadow: 0 4px 24px rgba(198, 198, 198, .2);
-    border-radius: 20px;
-    background-color: scss.$white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
     padding: 40px 15px;
     max-width: 250px;
     text-align: center;
@@ -109,6 +117,7 @@
       min-width: 300px;
       height: 350px;
       box-shadow: none;
+      background-color: scss.$white;
       margin: 0 auto;
     }
   }
