@@ -93,9 +93,6 @@ const Header = () => {
                     <NavLink className="sub-header__link" to="/maintenance-cleaning">{globalContent['maintenance-cleaning']}</NavLink>
                     <NavLink className="sub-header__link" to="/one-time-cleaning">{globalContent['one-time-cleaning']}</NavLink>
                     <NavLink className="sub-header__link" to="/">{globalContent['cleaning-for-eviction']}</NavLink>
-                    {/*<NavLink className="sub-header__link" to="/wallpaper">{globalContent['wallpaper']}</NavLink>*/}
-                    {/*<NavLink className="sub-header__link" to="/mold-removal">{globalContent['mold-removal']}</NavLink>*/}
-                    {/*<NavLink className="sub-header__link" to="/wall-repair">{globalContent['wall-repair']}</NavLink>*/}
                 </div>
             </header>
         </>

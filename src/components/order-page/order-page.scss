@@ -38,6 +38,8 @@
   }
 
   &__select-wrapper {
+    border: 1px solid #559EC7;
+    border-radius: 10px;
     max-width: 400px;
   }
 
@@ -84,7 +86,6 @@
     border-radius: 10px;
     padding: 15px 20px;
     font-size: 16px;
-    background-color: #F4F4F4;
 
     @include scss.on-tablet {
       margin-top: 20px;

@@ -2,7 +2,7 @@
 
 .service__item {
   width: auto;
-  border: 1px solid #C8C8C8;
+  border: 1px solid #C5DDE9;
   border-radius: 16px;
   padding: 20px;
   cursor: pointer;
@@ -11,6 +11,8 @@
   margin-right: 14px;
   display: inline-flex;
   align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(244, 127, 0, 0.08), 0 2px 6px rgba(28, 39, 45, 0.04);
 
   @include scss.on-tablet {
     padding: 15px;
@@ -30,5 +32,11 @@
       font-size: 14px;
       padding-left: 10px;
     }
+  }
+
+  &-price {
+    color: #f4870a;
+    font-weight: bold;
+    margin-left: 5px;
   }
 }

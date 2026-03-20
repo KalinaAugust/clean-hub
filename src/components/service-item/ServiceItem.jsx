@@ -18,7 +18,7 @@ export const ServiceItem = ({callback, type, item, currency}) => {
             onClick={handleClick}
         >
             {type === TYPE.CHECKBOX ? <Checkbox isManual isChecked={item.active}/> : <Radio isManual isChecked={item.active}/>}
-            <div className="service__item-title">{item.title} {item.price} {currency}</div>
+            <div className="service__item-title">{item.title} <span className="service__item-price">{item.price} {currency}</span></div>
         </div>
     )
 }
