@@ -564,6 +564,60 @@ const getOrderRU = (reduxPrices) => ({
                 active: false,
             },
         ],
+        // 23, № 10 БГМУ - пр-т Дзержинского, 93
+        '23': [
+            {
+                title: 'Разовая уборка',
+                price: reduxPrices.dzerzhinskogo_93?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 24, № 5 БГМУ - пр-т Дзержинского, 83/6
+        '24': [
+            {
+                title: 'Разовая уборка',
+                price: reduxPrices.dzerzhinskogo_83_6?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 25, № 6 БГМУ - пр-т Дзержинского, 83/7
+        '25': [
+            {
+                title: 'Разовая уборка',
+                price: reduxPrices.dzerzhinskogo_83_7?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 26, № 7 БГМУ - пр-т Дзержинского, 83/8
+        '26': [
+            {
+                title: 'Разовая уборка',
+                price: reduxPrices.dzerzhinskogo_83_8?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 27, № 4 БГТУ - ул. Белорусская, 19
+        '27': [
+            {
+                title: 'Разовая уборка',
+                price: reduxPrices.belorusskaya_19?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 28, № 21 БГТУ - ул. Белорусская, 21
+        '28': [
+            {
+                title: 'Разовая уборка',
+                price: reduxPrices.belorusskaya_21?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
     },
     processingPersonalData: 'Даю согласие на обработку моих персональных данных в маркетинговых целях.',
     step: 'ШАГ',
@@ -1146,6 +1200,60 @@ const getOrderCN = (reduxPrices) => ({
                 price: reduxPrices.kiselyova61?.['cleaning-for-eviction'],
                 name: 'cleaning-for-eviction',
                 active: false,
+            },
+        ],
+        // 23, № 10 БГМУ - пр-т Дзержинского, 93
+        '23': [
+            {
+                title: '一次性清洁',
+                price: reduxPrices.dzerzhinskogo_93?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 24, № 5 БГМУ - пр-т Дзержинского, 83/6
+        '24': [
+            {
+                title: '一次性清洁',
+                price: reduxPrices.dzerzhinskogo_83_6?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 25, № 6 БГМУ - пр-т Дзержинского, 83/7
+        '25': [
+            {
+                title: '一次性清洁',
+                price: reduxPrices.dzerzhinskogo_83_7?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 26, № 7 БГМУ - пр-т Дзержинского, 83/8
+        '26': [
+            {
+                title: '一次性清洁',
+                price: reduxPrices.dzerzhinskogo_83_8?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 27, № 4 БГТУ - ул. Белорусская, 19
+        '27': [
+            {
+                title: '一次性清洁',
+                price: reduxPrices.belorusskaya_19?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
+            },
+        ],
+        // 28, № 21 БГТУ - ул. Белорусская, 21
+        '28': [
+            {
+                title: '一次性清洁',
+                price: reduxPrices.belorusskaya_21?.['one-time-cleaning'],
+                name: 'one-time-cleaning',
+                active: true,
             },
         ],
     },
