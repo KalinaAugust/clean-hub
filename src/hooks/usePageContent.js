@@ -1556,6 +1556,12 @@ export const usePageContent = () => {
                 '20': reduxPrices.rabkorovskaya13?.['cleaning-for-eviction'],
                 '21': reduxPrices.pobediteley107?.['cleaning-for-eviction'],
                 '22': reduxPrices.kiselyova61?.['cleaning-for-eviction'],
+                '23': reduxPrices.dzerzhinskogo_93?.['cleaning-for-eviction'],
+                '24': reduxPrices.dzerzhinskogo_83_6?.['cleaning-for-eviction'],
+                '25': reduxPrices.dzerzhinskogo_83_7?.['cleaning-for-eviction'],
+                '26': reduxPrices.dzerzhinskogo_83_8?.['cleaning-for-eviction'],
+                '27': reduxPrices.belorusskaya_19?.['cleaning-for-eviction'],
+                '28': reduxPrices.belorusskaya_21?.['cleaning-for-eviction'],
             }
         },
         'one-time-cleaning': {
@@ -1584,6 +1590,12 @@ export const usePageContent = () => {
                 '20': reduxPrices.rabkorovskaya13?.['one-time-cleaning'],
                 '21': reduxPrices.pobediteley107?.['one-time-cleaning'],
                 '22': reduxPrices.kiselyova61?.['one-time-cleaning'],
+                '23': reduxPrices.dzerzhinskogo_93?.['one-time-cleaning'],
+                '24': reduxPrices.dzerzhinskogo_83_6?.['one-time-cleaning'],
+                '25': reduxPrices.dzerzhinskogo_83_7?.['one-time-cleaning'],
+                '26': reduxPrices.dzerzhinskogo_83_8?.['one-time-cleaning'],
+                '27': reduxPrices.belorusskaya_19?.['one-time-cleaning'],
+                '28': reduxPrices.belorusskaya_21?.['one-time-cleaning'],
             }
         },
         'maintenance-cleaning': {
@@ -1610,6 +1622,12 @@ export const usePageContent = () => {
                 '20': reduxPrices.rabkorovskaya13?.['maintenance-cleaning__2'],
                 '21': reduxPrices.pobediteley107?.['maintenance-cleaning__2'],
                 '22': reduxPrices.kiselyova61?.['maintenance-cleaning__2'],
+                '23': reduxPrices.dzerzhinskogo_93?.['maintenance-cleaning__2'],
+                '24': reduxPrices.dzerzhinskogo_83_6?.['maintenance-cleaning__2'],
+                '25': reduxPrices.dzerzhinskogo_83_7?.['maintenance-cleaning__2'],
+                '26': reduxPrices.dzerzhinskogo_83_8?.['maintenance-cleaning__2'],
+                '27': reduxPrices.belorusskaya_19?.['maintenance-cleaning__2'],
+                '28': reduxPrices.belorusskaya_21?.['maintenance-cleaning__2'],
             }
         },
     }), [reduxPrices]);
