@@ -53,7 +53,13 @@ export const FirstSection = ({ page }) => {
                                 onChange={setSelectedOption}
                                 placeholder={globalContent.placeholder}
                                 options={content.options}
+                                menuPortalTarget={document.body}
+                                menuPosition="fixed"
                                 styles={{
+                                    menuPortal: (baseStyles) => ({
+                                        ...baseStyles,
+                                        zIndex: 9999,
+                                    }),
                                     control: (baseStyles) => ({
                                         ...baseStyles,
                                         borderRadius: '10px',
