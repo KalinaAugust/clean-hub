@@ -567,55 +567,175 @@ const getOrderRU = (reduxPrices) => ({
         // 23, № 10 БГМУ - пр-т Дзержинского, 93
         '23': [
             {
-                title: 'Разовая уборка',
+                title: 'Разовая уборка (всего блока)',
                 price: reduxPrices.dzerzhinskogo_93?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Разовая уборка (места общего пользования + 1 жилая комната)',
+                price: reduxPrices.dzerzhinskogo_93?.['one-time-cleaning_general_1_room'],
+                name: 'one-time-cleaning_general_1_room',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (2 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_93?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (4 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_93?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: 'Уборка для выселения',
+                price: reduxPrices.dzerzhinskogo_93?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
+            },
+            {
+                title: 'Уборка мест общего пользования для выселения',
+                price: reduxPrices.dzerzhinskogo_93?.['cleaning-for-eviction-general'],
+                name: 'cleaning-for-eviction-general',
+                active: false,
             },
         ],
         // 24, № 5 БГМУ - пр-т Дзержинского, 83/6
         '24': [
             {
-                title: 'Разовая уборка',
+                title: 'Разовая уборка (всего блока)',
                 price: reduxPrices.dzerzhinskogo_83_6?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (2 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_83_6?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (4 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_83_6?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: 'Уборка для выселения',
+                price: reduxPrices.dzerzhinskogo_83_6?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 25, № 6 БГМУ - пр-т Дзержинского, 83/7
         '25': [
             {
-                title: 'Разовая уборка',
+                title: 'Разовая уборка (всего блока)',
                 price: reduxPrices.dzerzhinskogo_83_7?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (2 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_83_7?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (4 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_83_7?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: 'Уборка для выселения',
+                price: reduxPrices.dzerzhinskogo_83_7?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 26, № 7 БГМУ - пр-т Дзержинского, 83/8
         '26': [
             {
-                title: 'Разовая уборка',
+                title: 'Разовая уборка (всего блока)',
                 price: reduxPrices.dzerzhinskogo_83_8?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (2 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_83_8?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (4 уборки в месяц)',
+                price: reduxPrices.dzerzhinskogo_83_8?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: 'Уборка для выселения',
+                price: reduxPrices.dzerzhinskogo_83_8?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 27, № 4 БГТУ - ул. Белорусская, 19
         '27': [
             {
-                title: 'Разовая уборка',
+                title: 'Разовая уборка (всего блока)',
                 price: reduxPrices.belorusskaya_19?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (2 уборки в месяц)',
+                price: reduxPrices.belorusskaya_19?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (4 уборки в месяц)',
+                price: reduxPrices.belorusskaya_19?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: 'Уборка для выселения',
+                price: reduxPrices.belorusskaya_19?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 28, № 21 БГТУ - ул. Белорусская, 21
         '28': [
             {
-                title: 'Разовая уборка',
+                title: 'Разовая уборка (всего блока)',
                 price: reduxPrices.belorusskaya_21?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (2 уборки в месяц)',
+                price: reduxPrices.belorusskaya_21?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: 'Поддерживающая уборка по подписке (4 уборки в месяц)',
+                price: reduxPrices.belorusskaya_21?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: 'Уборка для выселения',
+                price: reduxPrices.belorusskaya_21?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
     },
@@ -1205,55 +1325,175 @@ const getOrderCN = (reduxPrices) => ({
         // 23, № 10 БГМУ - пр-т Дзержинского, 93
         '23': [
             {
-                title: '一次性清洁',
+                title: '一次性清洁（整机）',
                 price: reduxPrices.dzerzhinskogo_93?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: 'Разовая уборка (места общего пользования + 1 жилая комната)',
+                price: reduxPrices.dzerzhinskogo_93?.['one-time-cleaning_general_1_room'],
+                name: 'one-time-cleaning_general_1_room',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 2 次清洁）',
+                price: reduxPrices.dzerzhinskogo_93?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 4 次清洁）',
+                price: reduxPrices.dzerzhinskogo_93?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: '驱逐前清洁',
+                price: reduxPrices.dzerzhinskogo_93?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
+            },
+            {
+                title: '清洁驱逐公共区域',
+                price: reduxPrices.dzerzhinskogo_93?.['cleaning-for-eviction-general'],
+                name: 'cleaning-for-eviction-general',
+                active: false,
             },
         ],
         // 24, № 5 БГМУ - пр-т Дзержинского, 83/6
         '24': [
             {
-                title: '一次性清洁',
+                title: '一次性清洁（整机）',
                 price: reduxPrices.dzerzhinskogo_83_6?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: '订阅维护清洁（每月 2 次清洁）',
+                price: reduxPrices.dzerzhinskogo_83_6?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 4 次清洁）',
+                price: reduxPrices.dzerzhinskogo_83_6?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: '驱逐前清洁',
+                price: reduxPrices.dzerzhinskogo_83_6?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 25, № 6 БГМУ - пр-т Дзержинского, 83/7
         '25': [
             {
-                title: '一次性清洁',
+                title: '一次性清洁（整机）',
                 price: reduxPrices.dzerzhinskogo_83_7?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: '订阅维护清洁（每月 2 次清洁）',
+                price: reduxPrices.dzerzhinskogo_83_7?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 4 次清洁）',
+                price: reduxPrices.dzerzhinskogo_83_7?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: '驱逐前清洁',
+                price: reduxPrices.dzerzhinskogo_83_7?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 26, № 7 БГМУ - пр-т Дзержинского, 83/8
         '26': [
             {
-                title: '一次性清洁',
+                title: '一次性清洁（整机）',
                 price: reduxPrices.dzerzhinskogo_83_8?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: '订阅维护清洁（每月 2 次清洁）',
+                price: reduxPrices.dzerzhinskogo_83_8?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 4 次清洁）',
+                price: reduxPrices.dzerzhinskogo_83_8?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: '驱逐前清洁',
+                price: reduxPrices.dzerzhinskogo_83_8?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 27, № 4 БГТУ - ул. Белорусская, 19
         '27': [
             {
-                title: '一次性清洁',
+                title: '一次性清洁（整机）',
                 price: reduxPrices.belorusskaya_19?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: '订阅维护清洁（每月 2 次清洁）',
+                price: reduxPrices.belorusskaya_19?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 4 次清洁）',
+                price: reduxPrices.belorusskaya_19?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: '驱逐前清洁',
+                price: reduxPrices.belorusskaya_19?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
         // 28, № 21 БГТУ - ул. Белорусская, 21
         '28': [
             {
-                title: '一次性清洁',
+                title: '一次性清洁（整机）',
                 price: reduxPrices.belorusskaya_21?.['one-time-cleaning'],
                 name: 'one-time-cleaning',
                 active: true,
+            },
+            {
+                title: '订阅维护清洁（每月 2 次清洁）',
+                price: reduxPrices.belorusskaya_21?.['maintenance-cleaning__2'],
+                name: 'maintenance-cleaning__2',
+                active: false,
+            },
+            {
+                title: '订阅维护清洁（每月 4 次清洁）',
+                price: reduxPrices.belorusskaya_21?.['maintenance-cleaning__4'],
+                name: 'maintenance-cleaning__4',
+                active: false,
+            },
+            {
+                title: '驱逐前清洁',
+                price: reduxPrices.belorusskaya_21?.['cleaning-for-eviction'],
+                name: 'cleaning-for-eviction',
+                active: false,
             },
         ],
     },
